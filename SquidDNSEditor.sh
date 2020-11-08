@@ -27,6 +27,7 @@ read sethostnamepoint
 echo $appendcont $sethostnamepoint >> $appendfileconfig
 echo "Checking if Hostname was Added and Working:"
 curl -I $microrunner-$sethostnamepoint
+curl -I $sethostnamepoint
 echo "Please Wait for Squid Proxy service Restart:"
 service squid restart
 echo "The Server is up and New Hostname was added to the DNS Redirect Points!"
